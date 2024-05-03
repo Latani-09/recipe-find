@@ -18,16 +18,24 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-gradient-to-l from-blue-300 to-gray-400;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .text-details{
+    color: grey;
+    font-size: small;
+  }
+  .text-value{
+    @apply text-black ;
+    @apply font-bold;
+    @apply text-right;
+  }
+  .card-bg{
+    background-color:rgb(235, 235, 235);
+    
   }
 }
