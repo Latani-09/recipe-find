@@ -3,8 +3,6 @@ import Image from "next/image";
 import { InView } from "react-intersection-observer";
 
 import { useEffect, useState,useRef } from "react";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
-import RenderOnViewportEntry from "./RenderOnViewportEntry";
 export default function Home() {
 const isDevelopmentRun = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
   const isMountedRef = useRef(!isDevelopmentRun);
