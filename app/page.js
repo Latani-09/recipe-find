@@ -51,7 +51,7 @@ const isDevelopmentRun = !process.env.NODE_ENV || process.env.NODE_ENV === 'deve
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {
       recipes.length > 0 && recipes.map((recipe, key) => (
-        <InView as="div" onChange={(inView, entry)=>{  if (inView && key === recipes.length - 1) {
+        <InView as="div" key={key} onChange={(inView, entry)=>{  if (inView && key === recipes.length - 1) {
           debugger
           getRecipes(lastId, 4,false);}}} triggerOnce={true} threshold={1}>
         <RecipeCard key={key} recipe={recipe} redirectToDetail={redirectToDetail} />

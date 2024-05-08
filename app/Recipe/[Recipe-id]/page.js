@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState, } from "react";
 
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function RecipeView() {
     const [recipe, setRecipe] = useState();
@@ -36,7 +36,7 @@ export default function RecipeView() {
                 <div className=" m-5 p-4 col ">
                     <h5 className="text-md text-center font-bold">Ingredients</h5>
                     <ul className="p-5 ">
-                        {recipe.ingredients.map((ingredient, key) => (<li className="border-2 m-3  p-2">{ingredient}</li>))}
+                        {recipe.ingredients.map((ingredient, key) => (<li key={key} className="border-2 m-3  p-2">{ingredient}</li>))}
                     </ul>
 
                 </div>
