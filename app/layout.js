@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
      
       <body className={inter.className}>
       <nav className='bg-gray-800 '>
-      <div className="relative flex h-16 items-center justify-between m-5">Recipe App</div></nav>
+      <div className="relative flex h-16 items-center justify-between ">Recipe App</div></nav>
       {children}
       </body>
     </html>
